@@ -6,6 +6,10 @@ body{
     background: rgb(88,88,88);
     background: radial-gradient(circle, rgba(88,88,88,1) 55%, rgba(34,32,32,1) 100%);
 }
+.nav{
+    background-color: #040607;
+    font-size: 1rem;
+}
 h1{
     color: rgb(255, 255, 255);
     text-align: center;
@@ -41,6 +45,7 @@ button{
     border: #173441 1.8px solid;
     width: 100px;
     font-family: 'arial';
+    text-decoration: none;
     font-size: 15px;  
     border-radius: 2px;
     padding: 10px;
@@ -62,4 +67,11 @@ i{
     border: #888888 2px solid;
     margin: 0 auto;
     width: 500px;
+}
+.btn{
+    text-decoration-color: #040607;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 1rem;
+    background-color:#2f00af
 }

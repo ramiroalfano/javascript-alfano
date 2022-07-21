@@ -5,8 +5,6 @@ class prestamo{
         this.interes = interes;
     }
 }
-let listaPrestamo = [];
-
 function genTable (){
     document.getElementById("tab").innerHTML="";
     let n=Number(document.getElementById("capital").value);
