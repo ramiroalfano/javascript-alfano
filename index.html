@@ -11,22 +11,55 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
     crossorigin="anonymous"
     />
+    <!--Fav Icon-->
+    <link rel="shortcut icon" href="imagenes/logo_size.jpg" type="image/x-icon">
+    <!--Link Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <!--Link FontAwesome-->
+    <script src="https://kit.fontawesome.com/1bb6d48af2.js" crossorigin="anonymous"></script>
     <!--link css-->
     <link rel="stylesheet" href="/css/estilo.css">
         <title>Prestamos</title>
 </head>
 <body>
+    <!--inicio heather-->
     <header>
         <ul class="nav justify-content-center">
             <li class="nav-item">
-            <a class="nav-link" href="index.html">Bienvenido a nuestro simulador de prestamo</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="html/login.html">login</a>
+            <a class="nav-link" href="index.html"><i class="fa-solid fa-hand-holding-dollar"></i>Simulado de Prestamos</a>
             </li>
         </ul>
     </header>
-    <div class="form">
+    <!--inicio jumbotron-->
+    <div class="jumbotron">
+    <div class="mt-4 p-5 text-white rounded">
+        <h1>Bienvenido al Simulador de prestamos</h1>
+        <p>Antes de simular su prestamo registrese</p>
+        <a  href="html/login.html"><button type="button" class="btn btn-danger">Registrarse</button></a>
+    </div>
+</div>
+<!--login-->
+<h2>Si ya tiene usuario por favor inicie sesion para empezar a simular</h2>
+<form>
+    <div class="row">
+    <div class="col">
+        <input type="text" class="form-control" placeholder="Usuario" id="nombreUsuario">
+    </div>
+    <div class="col">
+        <input type="password" class="form-control" placeholder="Contraseña" id="passUsuario">
+    </div>
+    </div>
+</form>
+
+<div id="mensaje">
+
+</div>
+
+<button onclick="validar()">Validar</button>
+<!--inicio simulador-->
+    <div id="solicitarPrestamo" class="form" hidden>
         <fieldset>
             <h1>SIMULADOR DE PRESTAMO</h1>
             <form>
@@ -70,9 +103,11 @@
             </tfoot>
         </table>
     </div>
-    <script src="/js/clase.js"></script>
-
+<!--scrips bt y js-->
+    <script src="js/clase1.js"></script>
+    <script src="js/clase.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+</div>
 </body>
 </html>

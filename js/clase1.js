@@ -1,8 +1,6 @@
 let usuarioRegistrado = "Ramiro";
 let passRegistrado = "1414";
 
-
-
 function validar(){
 
     let nombre = document.getElementById("nombreUsuario");
@@ -15,9 +13,10 @@ function validar(){
 
     if( nombre.value == usuarioRegistrado  &&  pass.value == passRegistrado){
     let parrafo = document.createElement("p");
-    parrafo.innerText = "Bienvenido/a a nustra pagina!"
+    parrafo.innerText = "Bienvenido/a a nuestra pagina! Ya puede solicitar su Prestamo"
     mensaje.append(parrafo);
     mensaje.style.color = "white";
+    solicitarPrestamo.removeAttribute("hidden")
 
     }
     else{
@@ -27,11 +26,4 @@ function validar(){
                                 <p>Contraseña invalida: ${pass.value}</p>`;
     }
 
-}
-function saludar(){
-
-    let nombre = document.getElementById("nombre_usuario");
-
-    console.log(nombre);
-    console.log("Hola Bienvenido/a al sistema: " , nombre.value);
 }
