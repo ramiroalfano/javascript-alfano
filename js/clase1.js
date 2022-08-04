@@ -5,25 +5,28 @@ function validar(){
 
     let nombre = document.getElementById("nombreUsuario");
     let pass = document.getElementById("passUsuario");
-    let mensaje = document.getElementById("mensaje");
 
     console.log("El nombre del usuario es:" , nombre.value);
     console.log("Y la pass es:" , pass.value);
 
 
     if( nombre.value == usuarioRegistrado  &&  pass.value == passRegistrado){
-    let parrafo = document.createElement("p");
-    parrafo.innerText = "Bienvenido/a a nuestra pagina! Ya puede solicitar su Prestamo"
-    mensaje.append(parrafo);
-    mensaje.style.color = "white";
+        Toastify({
+            text: "Bienvenido ya puede simular su prestamo",
+            duration: 3000,
+            style: {
+                background: "linear-gradient(to right, #00b09b, #96c93d)",
+            },
+            }).showToast();
     solicitarPrestamo.removeAttribute("hidden")
 
     }
     else{
-    document.body.innerHTML = `<h2>ERROR DE USUARIO O CONTRASEÑA</h2>
-                                <p>No puede ingresar a nuestra pagina por favor intentelo nuevamente<p>
-                                <p>Nombre de usuario incorrecto: ${nombre.value}</p>
-                                <p>Contraseña invalida: ${pass.value}</p>`;
+        Swal.fire({
+            icon: 'error',
+            title: 'Error al ingresar',
+            text: 'Por favor vuelva a escribir el usuario y la contraseña',
+          })
     }
 
 }
