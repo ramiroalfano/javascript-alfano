@@ -26,7 +26,7 @@ function validar(){
             icon: 'error',
             title: 'Error al ingresar',
             text: 'Por favor vuelva a escribir el usuario y la contraseña',
-          })
+        })
     }
 
 }

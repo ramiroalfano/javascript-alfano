@@ -19,5 +19,5 @@ boton.addEventListener("click" , setData )
 boton.addEventListener("click" , myfunction)
 
 function myfunction(){
-    alert("su usuario ha sido creado con exito");
+    alert("su usuario ha sido creado con exito, vuelva a la pagina principal y inicie sesion con su nombre y contraseña");
 }
